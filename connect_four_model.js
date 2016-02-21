@@ -10,9 +10,20 @@ function Board(){
 
 Board.prototype.addChecker = function(color, column){
   var property = "col" + column;
-  this[property].push(color);
-  var coordinatesForView = [column, (this[property].length-1)]
-  return coordinatesForView
+    if (this.columnFilled(property)){
+      this[property].push(color);
+      var coordinatesForView = [column, (this[property].length-1)]
+      console.log(coordinatesForView)
+    }
+    else {
+      console.log("error")
+    }
+}
+
+Board.prototype.columnFilled = function (property) {
+  if (this[property].length <= 5){
+    return true
+  }
 }
 
 // Board.prototype.horizontalSolve = nil
