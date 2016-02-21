@@ -1,71 +1,44 @@
-    .checker0 {
+    .checker {
       position: absolute;
-      top: -120px;
-      left: 0px;
       background-color: red;
       width: 100px;
       height: 100px;
       z-index: +1;
+    }
+
+    .checker0 {
+      top: -120px;
+      left: 0px;
     }
 
     .checker1 {
-      position: absolute;
       top: -120px;
       left: 120px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .checker2 {
-      position: absolute;
       top: -120px;
       left: 240px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .checker3 {
-      position: absolute;
       top: -120px;
       left: 360px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .checker4 {
-      position: absolute;
       top: -120px;
       left: 480px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .checker5 {
-      position: absolute;
       top: -120px;
       left: 600px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .checker6 {
-      position: absolute;
       top: -120px;
       left: 720px;
-      background-color: red;
-      width: 100px;
-      height: 100px;
-      z-index: +1;
     }
 
     .main {
