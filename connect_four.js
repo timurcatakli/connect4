@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
       
   $(".checker00").click(function(){
     $(".checker00").animate({top: "+=240px"});
