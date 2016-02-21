@@ -1,33 +1,3 @@
-function Board(){
-  this.col0 = [];
-  this.col1 = [];
-  this.col2 = [];
-  this.col3 = [];
-  this.col4 = [];
-  this.col5 = [];
-  this.col6 = [];
-}
-
-Board.prototype.addChecker = function(color, column){
-  var property = "col" + column;
-  this[property].push(color);
-  var coordinatesForView = [column, (this[property].length-1)]
-  console.log(coordinatesForView)
-}
-
-function Play(){
-  this.color = "r"
-}
-
-Play.prototype.switchPlayer = function(){
-  if (this.color === "r"){
-    this.color = "b"
-  }
-  else if (this.color === "b"){
-    this.color = "r"
-  }
-}
-
   // mouseover function starts here
   $(".checker").mouseover(function(){
     $(this).css('background-color', 'blue')
