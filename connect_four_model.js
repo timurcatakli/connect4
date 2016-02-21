@@ -8,16 +8,16 @@ function Board(){
   this.col6 = [];
 }
 
+Board.prototype.addChecker = function(color, column){
+  var property = "col" + column;
+  this[property].push(color);
+  var coordinatesForView = [column, (this[property].length-1)]
+  return coordinatesForView
+}
+
 // Board.prototype.horizontalSolve = nil
 // Board.prototype.verticalSolve = nil
 // Board.prototype.backSolve = nil
 // Board.prototype.forwardSolve = nil
 // Board.prototype.addChecker = nil
 // Board.prototype.talkToView = nil//sends coordinates col# and row #
-
-function Play(){
-  // this.color = ???
-}
-
-// Play.prototype.switchPlayer =
-// if color = red be black
