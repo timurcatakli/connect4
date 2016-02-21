@@ -10,12 +10,20 @@ Play.prototype.switchPlayer = function(){
     this.color = "r"
   }
 
-Board.prototype.addChecker = function(color, coordinates){
-  var property = "col" + coordinates[0];
+Board.prototype.addChecker = function(color, column){
+  var property = "col" + column;
   this[property].push(color);
-  var coordinatesForView = [coordinates[0], (this[property].length-1)]
+  var coordinatesForView = [column, (this[property].length-1)]
   return coordinatesForView
 }
 
 board.addChecker("r", [0,1]);
+
+function Computer(){}
+
+Computer.prototype.move = function(){
+  var color = "b"
+  var column = Math.floor(Math.random() * (6 - 0 +1) + 0)
+  return column
+}
 
