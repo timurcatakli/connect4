@@ -8,16 +8,16 @@ function Board(){
   this.col6 = [];
 }
 
-Board.prototype.horizontalSolve = nil
-Board.prototype.verticalSolve = nil
-Board.prototype.backSolve = nil
-Board.prototype.forwardSolve = nil
-Board.prototype.addChecker = nil
-Board.prototype.talkToView = nil//sends coordinates col# and row #
+// Board.prototype.horizontalSolve = nil
+// Board.prototype.verticalSolve = nil
+// Board.prototype.backSolve = nil
+// Board.prototype.forwardSolve = nil
+// Board.prototype.addChecker = nil
+// Board.prototype.talkToView = nil//sends coordinates col# and row #
 
 function Play(){
-  this.color = ???
+  // this.color = ???
 }
 
-Play.prototype.switchPlayer =
+// Play.prototype.switchPlayer =
 // if color = red be black

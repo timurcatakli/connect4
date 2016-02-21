@@ -2,34 +2,54 @@ function View(){
 
 }
 
-View.prototype.getClick()=
-View.prototype.dropChecker(color, coordinates)= //passed in from Board
+// View.prototype.getClick()=
+// View.prototype.dropChecker(color, coordinates)= //passed in from Board
 
 
-  $(".checker00").click(function(){
-    $(".checker00").animate({top: "+=240px"});
+  // mouseover function starts here
+  $(".checker").mouseover(function(){
+    $(this).css('background-color', 'blue')
   });
 
-  $(".checker01").click(function(){
-    $(".checker01").animate({top: "+=600px"});
+  $(".checker").mouseout(function(){
+    $(this).css('background-color', 'red')
+  });
+  // mouseover function ends here
+
+  // checker click function starts here
+  $(".checker").click(function(e){
+    e.preventDefault;
+    alert($(this).attr('col'));
+  });
+  // checker click function ends here
+
+
+
+
+  $(".checker0").click(function(){
+    $(".checker0").animate({top: "+=240px"});
   });
 
-  $(".checker02").click(function(){
-    $(".checker02").animate({top: "+=120px"});
+  $(".checker1").click(function(){
+    $(".checker1").animate({top: "+=600px"});
   });
 
-  $(".checker03").click(function(){
-    $(".checker03").animate({top: "+=480px"});
+  $(".checker2").click(function(){
+    $(".checker2").animate({top: "+=120px"});
   });
 
-  $(".checker04").click(function(){
-    $(".checker04").animate({top: "+=360px"});
+  $(".checker3").click(function(){
+    $(".checker3").animate({top: "+=480px"});
   });
 
-  $(".checker05").click(function(){
-    $(".checker05").animate({top: "+=120px"});
+  $(".checker4").click(function(){
+    $(".checker4").animate({top: "+=360px"});
   });
 
-  $(".checker06").click(function(){
-    $(".checker06").animate({top: "+=600px"});
+  $(".checker5").click(function(){
+    $(".checker5").animate({top: "+=120px"});
+  });
+
+  $(".checker6").click(function(){
+    $(".checker6").animate({top: "+=600px"});
   });
