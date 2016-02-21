@@ -1,9 +1,9 @@
     .checker {
       position: absolute;
-      background-color: gray;
       width: 100px;
       height: 100px;
       z-index: +1;
+      background-color: blue;
     }
 
     .checker0 {
@@ -48,6 +48,7 @@
       background-color: gray;
       height: 700px;
       width: 820px;
+      z-index: 0;
       }
 
     .cell00 {
