@@ -1,4 +1,4 @@
-function Board(){
+function Board(view){
   this.col0 = [];
   this.col1 = [];
   this.col2 = [];
@@ -6,14 +6,15 @@ function Board(){
   this.col4 = [];
   this.col5 = [];
   this.col6 = [];
+  // this.view = view;
 }
 
 Board.prototype.addChecker = function(color, column){
   var property = "col" + column;
     if (this.columnFilled(property)){
       this[property].push(color);
-      var coordinatesForView = [column, (this[property].length-1)]
-      console.log(coordinatesForView)
+      var coordinatesForView = [parseInt(column), (this[property].length-1)]
+      return coordinatesForView
     }
     else {
       console.log("error")
