@@ -1,8 +1,12 @@
 $(document).ready(function(){
 
+  var board = new Board();
+  var view = new View();
+  var play = new Play();
 
 
-      
+
+
   $(".checker00").click(function(){
     $(".checker00").animate({top: "+=240px"});
   });
