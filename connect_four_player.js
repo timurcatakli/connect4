@@ -1,23 +1,22 @@
-function Play(){
-  this.color = "r"
-}
+// function Play(){
+//   this.color = "r"
+// }
 
-Play.prototype.switchPlayer = function(){
-  if (this.color === "r"){
-    this.color = "b"
-  }
-  else if (this.color === "b"){
-    this.color = "r"
-  }
+// Play.prototype.switchPlayer = function(){
+//   if (this.color === "r"){
+//     this.color = "b"
+//   }
+//   else if (this.color === "b"){
+//     this.color = "r"
+//   }
+// }
 
-Board.prototype.addChecker = function(color, column){
-  var property = "col" + column;
-  this[property].push(color);
-  var coordinatesForView = [column, (this[property].length-1)]
-  return coordinatesForView
-}
-
-board.addChecker("r", [0,1]);
+// Board.prototype.addChecker = function(color, column){
+//   var property = "col" + column;
+//   this[property].push(color);
+//   var coordinatesForView = [column, (this[property].length-1)]
+//   return coordinatesForView
+// }
 
 function Computer(){}
 
