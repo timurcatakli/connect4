@@ -8,16 +8,36 @@ function Board(){
   this.col6 = [];
 }
 
-Board.prototype.horizontalSolve = nil
-Board.prototype.verticalSolve = nil
-Board.prototype.backSolve = nil
-Board.prototype.forwardSolve = nil
-Board.prototype.addChecker = nil
-Board.prototype.talkToView = nil//sends coordinates col# and row #
-
-function Play(){
-  this.color = ???
+// Board.prototype.horizontalSolve = function(){
+//   this.col0.forEach(function(value, index){
+//     var counter = 0;
+//     var color = "";
+//     if (col)
+//   })
+// }
+Board.prototype.verticalSolve = function(){
+  var counter = 0;
+  var color = "";
+  this.col0.forEach(function(value){
+    if (color == value) {
+      counter++;
+    } else {
+      counter = 0;
+    }
+    if (counter == 3) {
+      console.log("YOU WIN!")
+    }
+    color = value;
+  })
 }
+Board.prototype.backSolve = function(){}
+Board.prototype.forwardSolve = function(){}
+Board.prototype.addChecker = function(){}
+Board.prototype.talkToView = function(){}//sends coordinates col# and row #
 
-Play.prototype.switchPlayer =
-// if color = red be black
+// function Play(){
+//   this.color = ???
+// }
+
+// Play.prototype.switchPlayer =
+// // if color = red be black
