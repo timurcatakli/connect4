@@ -68,6 +68,7 @@ Board.prototype.verticalSolve = function(){
 }
 
 Board.prototype.backSolve = function(){}
+
 Board.prototype.forwardSolve = function(){}
 Board.prototype.addChecker = function(){}
 Board.prototype.talkToView = function(){}//sends coordinates col# and row #
