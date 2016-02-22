@@ -1,12 +1,13 @@
 
 function View(){};
-
+var turnTimer = null;
 // checker click function starts here
 View.prototype.getClick = function(board, play, dropChecker){
     $(".checker").click(function(e){
       e.preventDefault;
       console.log(this);
       var col = $(this).attr('col');
+      // stopTimer();
       dropChecker(play, board.addChecker(play.color, col));
     });
     $("#resetGame").click(function(e)
@@ -34,9 +35,9 @@ var dropChecker = function (play, coordinates){
   play.switchPlayer();
 }
 
-function startTimer(duration, display) {
+var startTimer = function(duration, display,play) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    turnTimer = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -47,15 +48,20 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = duration;
-            alert("Timer done");
-        }
+            play.switchPlayer();
+                    }
     }, 1000);
 }
 
-function resetTimer(){
+function resetTimer(play){
+  turnTimer = null;
    display = $('#time');
-   startTimer(30, display);
+   startTimer(10, display,play);
 }
+function stopTimer(play){
+  turnTimer = null;
+}
+
 
 $(document).ready(function(){
 
@@ -73,6 +79,7 @@ $(document).ready(function(){
   var solved = false;
 
   view.getClick(board, play, dropChecker);
+  resetTimer(play);
 
 
 
@@ -90,16 +97,16 @@ $(document).ready(function(){
 
 
 
-  var fiveSeconds = new Date().getTime() + 5000;
+  // var fiveSeconds = new Date().getTime() + 5000;
 
-  $('#clock').countdown(fiveSeconds).on('update.countdown', function(event) {
+  // $('#clock').countdown(fiveSeconds).on('update.countdown', function(event) {
 
-    var $this = $(this);
-      $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
-  }).on('finish.countdown', function(e){
-    console.log(play.color);
-    play.switchPlayer();
-    console.log(play.color);
-    $('#clock').countdown(new Date().getTime() + 5000)
-  });
+  //   var $this = $(this);
+  //     $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
+  // }).on('finish.countdown', function(e){
+  //   console.log(play.color);
+  //   play.switchPlayer();
+  //   console.log(play.color);
+  //   $('#clock').countdown(new Date().getTime() + 5000)
+  // });
 })
