@@ -6,7 +6,6 @@ function Board(view){
   this.col4 = [];
   this.col5 = [];
   this.col6 = [];
-  // this.view = view;
 }
 
 Board.prototype.horizontalHelper = function(colCounter, counter, color, index){
@@ -41,7 +40,7 @@ Board.prototype.horizontalSolve = function(){
           }
           colCounter = i;
           if (counter == 3) {
-            console.log("YOU WIN!");
+            alert("YOU WIN!");
           }
         }
       })
@@ -66,7 +65,7 @@ Board.prototype.verticalSolve = function(){
     }
   }
   if (counter == 3) {
-    console.log("YOU WIN!");
+    alert("YOU WIN!");
   }
 }
 
@@ -106,7 +105,7 @@ Board.prototype.backSolve = function(){
           }
           colCounter = i;
           if (counter == 3) {
-            console.log("YOU WIN!");
+            alert("YOU WIN!");
           }
         }
       })
@@ -150,7 +149,7 @@ Board.prototype.forwardSolve = function(){
           }
           colCounter = i;
           if (counter == 3) {
-            console.log("YOU WIN!");
+            alert("YOU WIN!");
           }
         }
       })
@@ -158,21 +157,20 @@ Board.prototype.forwardSolve = function(){
   }
 }
 
-Board.prototype.talkToView = function(){}//sends coordinates col# and row #
-
-// function Play(){
-//   this.color = ???
-// }
-
-// Play.prototype.switchPlayer =
-// // if color = red be black
+Board.prototype.solver = function(){
+  this.verticalSolve();
+  this.horizontalSolve();
+  this.backSolve();
+  this.forwardSolve();
+}
 
 Board.prototype.addChecker = function(color, column){
   var property = "col" + column;
     if (this.columnFilled(property)){
       this[property].push(color);
       var coordinatesForView = [parseInt(column), (this[property].length-1)]
-      return coordinatesForView
+      // this.solver();
+      return coordinatesForView;
     }
     else {
       console.log("error")
