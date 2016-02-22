@@ -36,11 +36,24 @@
     #player{
       position: relative;
       margin: 0 auto;
-      padding: 20px;
+      padding: 10px;
       font-family: Verdana;
       color: white;
       background-color: black;
       text-align: center;
+    }
+    #time-div{
+      position: relative;
+      margin: 0 auto;
+      padding: 10px;
+      font-family: Verdana;
+      color: white;
+      background-color: black;
+      text-align: center;
+    }
+    #resetGame{
+      float: right;
+
     }
 
     .checker {
