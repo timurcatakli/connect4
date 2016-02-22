@@ -1,13 +1,46 @@
+    body {
+      background-image: url("img/background.png");
+      background-repeat: no-repeat;
+      background-color: black;
+      background-position:-500px 0px;
+    }
+
+    .background {
+      background-position:0px -20px;
+      width:861px;
+      margin:0 auto;
+      margin-top: 160px;
+      height: 757px;
+      background-repeat: no-repeat;
+      z-index:+3;
+      background-image: url(img/board_main.png);
+    }
+
+    .main {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 100px;
+      height: 700px;
+      width: 820px;
+      z-index: -1;
+      }
+
+    .cell_red {
+      background-image: url(img/checker_red.png);
+    }
+
+    .cell_black {
+      background-image: url(img/checker_black.png);
+    }
+
     #player{
+      position: relative;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Verdana;
       color: white;
       background-color: black;
       text-align: center;
-      font-family: Verdana, Geneva, sans-serif;
-      height: 80px;
-      width: 100px;
-      position: absolute;
-      left: 900px;
-      top: 0px;
     }
 
     .checker {
@@ -15,7 +48,7 @@
       width: 100px;
       height: 100px;
       z-index: +1;
-      background-color: blue;
+      background-image: url(img/checker_default.png);
     }
 
     .checker0 {
@@ -53,349 +86,220 @@
       left: 720px;
     }
 
-    .main {
-      position: relative;
-      margin: 0 auto;
-      margin-top: 100px;
-      height: 700px;
-      width: 820px;
-      z-index: -1;
-      }
-
-    .cell00 {
+    .cell {
       position: absolute;
-      top: 600px;
-      left: 0px;
       width: 100px;
       height: 100px;
+    }
+
+    .cell00 {
+      top: 600px;
+      left: 0px;
     }
 
     .cell01 {
-      position: absolute;
       top: 480px;
       left: 0px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell02 {
-      position: absolute;
       top: 360px;
       left: 0px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell03 {
-      position: absolute;
       top: 240px;
       left: 0px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell04 {
-      position: absolute;
       top: 120px;
       left: 0px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell05 {
-      position: absolute;
       top: 0px;
       left: 0px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell10 {
-      position: absolute;
       top: 600px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell11 {
-      position: absolute;
       top: 480px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell12 {
-      position: absolute;
       top: 360px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell13 {
-      position: absolute;
       top: 240px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell14 {
-      position: absolute;
       top: 120px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell15 {
-      position: absolute;
       top: 0px;
       left: 120px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell20 {
-      position: absolute;
       top: 600px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell21 {
-      position: absolute;
       top: 480px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell22 {
-      position: absolute;
       top: 360px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell23 {
-      position: absolute;
       top: 240px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell24 {
-      position: absolute;
       top: 120px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell25 {
-      position: absolute;
       top: 0px;
       left: 240px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell30 {
-      position: absolute;
       top: 600px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell31 {
-      position: absolute;
       top: 480px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell32 {
-      position: absolute;
       top: 360px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell33 {
-      position: absolute;
       top: 240px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell34 {
-      position: absolute;
       top: 120px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell35 {
-      position: absolute;
       top: 0px;
       left: 360px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell40 {
-      position: absolute;
       top: 600px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell41 {
-      position: absolute;
       top: 480px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell42 {
-      position: absolute;
       top: 360px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell43 {
-      position: absolute;
       top: 240px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell44 {
-      position: absolute;
       top: 120px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell45 {
-      position: absolute;
       top: 0px;
       left: 480px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell50 {
-      position: absolute;
       top: 600px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell51 {
-      position: absolute;
       top: 480px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell52 {
-      position: absolute;
       top: 360px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell53 {
-      position: absolute;
       top: 240px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell54 {
-      position: absolute;
       top: 120px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell55 {
-      position: absolute;
       top: 0px;
       left: 600px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell60 {
-      position: absolute;
       top: 600px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell61 {
-      position: absolute;
       top: 480px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell62 {
-      position: absolute;
       top: 360px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell63 {
-      position: absolute;
       top: 240px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell64 {
-      position: absolute;
       top: 120px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
     .cell65 {
-      position: absolute;
       top: 0px;
       left: 720px;
-      width: 100px;
-      height: 100px;
     }
 
 
