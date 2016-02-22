@@ -9,6 +9,11 @@ View.prototype.getClick = function(board, play, dropChecker){
       var col = $(this).attr('col');
       dropChecker(play, board.addChecker(play.color, col));
     });
+    $("#resetGame").click(function(e)
+    {
+      e.preventDefault();
+      location.reload();
+    });
 
 }
 // checker click function ends here
@@ -17,7 +22,7 @@ var dropChecker = function (play, coordinates){
   var checkerRow = coordinates[1];
   var checkerColumn = coordinates[0];
   var checkerColumnJquery = ".checker" + checkerColumn;
-  var destinationCell = '.cell' + checkerColumn + checkerRow
+  var destinationCell = '.cell' + checkerColumn + checkerRow;
   var checkerRowJquery = (6 - checkerRow) * 120;
     // console.log(checkerRow + " " + checkerColumn);
   // $(checkerColumnJquery).css("background-color", play.color);
@@ -27,6 +32,29 @@ var dropChecker = function (play, coordinates){
   }, 1000);
   $(checkerColumnJquery).animate({top: "-=" + checkerRowJquery + "px"});
   play.switchPlayer();
+}
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+            alert("Timer done");
+        }
+    }, 1000);
+}
+
+function resetTimer(){
+   display = $('#time');
+   startTimer(30, display);
 }
 
 $(document).ready(function(){
@@ -62,32 +90,16 @@ $(document).ready(function(){
 
 
 
-  // var fiveSeconds = new Date().getTime() + 5000;
+  var fiveSeconds = new Date().getTime() + 5000;
 
-  // $('#clock').countdown(fiveSeconds).on('update.countdown', function(event) {
+  $('#clock').countdown(fiveSeconds).on('update.countdown', function(event) {
 
-  //   var $this = $(this);
-  //     $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
-  // }).on('finish.countdown', function(e){
-  //   alert("Test");
-  //   this.countdown('start');
-  // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    var $this = $(this);
+      $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
+  }).on('finish.countdown', function(e){
+    console.log(play.color);
+    play.switchPlayer();
+    console.log(play.color);
+    $('#clock').countdown(new Date().getTime() + 5000)
+  });
 })
