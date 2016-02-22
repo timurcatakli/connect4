@@ -5,11 +5,11 @@ var turnTimer = null;
 View.prototype.getClick = function(board, play, dropChecker){
     $(".checker").click(function(e){
       e.preventDefault;
-      console.log(this);
       var col = $(this).attr('col');
       resetTimer(play);
       dropChecker(play, board.addChecker(play.color, col));
     });
+
     $("#resetGame").click(function(e)
     {
       e.preventDefault();
@@ -25,8 +25,6 @@ var dropChecker = function (play, coordinates){
   var checkerColumnJquery = ".checker" + checkerColumn;
   var destinationCell = '.cell' + checkerColumn + checkerRow;
   var checkerRowJquery = (6 - checkerRow) * 120;
-    // console.log(checkerRow + " " + checkerColumn);
-  // $(checkerColumnJquery).css("background-color", play.color);
   $(checkerColumnJquery).animate({top: "+=" + checkerRowJquery + "px"}, 1000);
   setTimeout(function(){
     // $(destinationCell).css('background-color', play.color);
@@ -76,9 +74,15 @@ $(document).ready(function(){
   var play = new Play();
   var view = new View();
   var solved = false;
-
   view.getClick(board, play, dropChecker);
   resetTimer(play);
+
+  $('#player').bind("DOMSubtreeModified", function(){
+    if($('#player').text().indexOf("Red") > -1){
+      var col = play.move();
+      dropChecker(play, board.addChecker(play.color, col));
+    }
+  });
 
 
 
