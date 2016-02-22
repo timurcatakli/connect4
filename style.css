@@ -45,17 +45,15 @@
       position: relative;
       margin: 0 auto;
       margin-top: 100px;
-      background-color: gray;
       height: 700px;
       width: 820px;
-      z-index: 0;
+      z-index: -1;
       }
 
     .cell00 {
       position: absolute;
       top: 600px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -64,7 +62,6 @@
       position: absolute;
       top: 480px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -73,7 +70,6 @@
       position: absolute;
       top: 360px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -82,7 +78,6 @@
       position: absolute;
       top: 240px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -91,7 +86,6 @@
       position: absolute;
       top: 120px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -100,7 +94,6 @@
       position: absolute;
       top: 0px;
       left: 0px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -109,7 +102,6 @@
       position: absolute;
       top: 600px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -118,7 +110,6 @@
       position: absolute;
       top: 480px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -127,7 +118,6 @@
       position: absolute;
       top: 360px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -136,7 +126,6 @@
       position: absolute;
       top: 240px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -145,7 +134,6 @@
       position: absolute;
       top: 120px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -154,7 +142,6 @@
       position: absolute;
       top: 0px;
       left: 120px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -163,7 +150,6 @@
       position: absolute;
       top: 600px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -172,7 +158,6 @@
       position: absolute;
       top: 480px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -181,7 +166,6 @@
       position: absolute;
       top: 360px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -190,7 +174,6 @@
       position: absolute;
       top: 240px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -199,7 +182,6 @@
       position: absolute;
       top: 120px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -208,7 +190,6 @@
       position: absolute;
       top: 0px;
       left: 240px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -217,7 +198,6 @@
       position: absolute;
       top: 600px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -226,7 +206,6 @@
       position: absolute;
       top: 480px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -235,7 +214,6 @@
       position: absolute;
       top: 360px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -244,7 +222,6 @@
       position: absolute;
       top: 240px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -253,7 +230,6 @@
       position: absolute;
       top: 120px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -262,7 +238,6 @@
       position: absolute;
       top: 0px;
       left: 360px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -271,7 +246,6 @@
       position: absolute;
       top: 600px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -280,7 +254,6 @@
       position: absolute;
       top: 480px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -289,7 +262,6 @@
       position: absolute;
       top: 360px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -298,7 +270,6 @@
       position: absolute;
       top: 240px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -307,7 +278,6 @@
       position: absolute;
       top: 120px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -316,7 +286,6 @@
       position: absolute;
       top: 0px;
       left: 480px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -325,7 +294,6 @@
       position: absolute;
       top: 600px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -334,7 +302,6 @@
       position: absolute;
       top: 480px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -343,7 +310,6 @@
       position: absolute;
       top: 360px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -352,7 +318,6 @@
       position: absolute;
       top: 240px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -361,7 +326,6 @@
       position: absolute;
       top: 120px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -370,7 +334,6 @@
       position: absolute;
       top: 0px;
       left: 600px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -379,7 +342,6 @@
       position: absolute;
       top: 600px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -388,7 +350,6 @@
       position: absolute;
       top: 480px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -397,7 +358,6 @@
       position: absolute;
       top: 360px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -406,7 +366,6 @@
       position: absolute;
       top: 240px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -415,7 +374,6 @@
       position: absolute;
       top: 120px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
@@ -424,7 +382,6 @@
       position: absolute;
       top: 0px;
       left: 720px;
-      background-color: green;
       width: 100px;
       height: 100px;
     }
