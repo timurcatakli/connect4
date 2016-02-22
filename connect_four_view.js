@@ -23,7 +23,8 @@ var dropChecker = function (play, coordinates){
   // $(checkerColumnJquery).css("background-color", play.color);
   $(checkerColumnJquery).animate({top: "+=" + checkerRowJquery + "px"}, 1000);
   setTimeout(function(){
-    $(destinationCell).css('background-color', play.color);
+    // $(destinationCell).css('background-color', play.color);
+    $(destinationCell).addClass("cell_" + play.color);
   }, 1000);
   $(checkerColumnJquery).animate({top: "-=" + checkerRowJquery + "px"});
   play.switchPlayer();
