@@ -77,12 +77,13 @@ $(document).ready(function(){
   view.getClick(board, play, dropChecker);
   resetTimer(play);
 
-  $('#player').bind("DOMSubtreeModified", function(){
-    if($('#player').text().indexOf("Red") > -1){
-      var col = play.move();
-      dropChecker(play, board.addChecker(play.color, col));
-    }
-  });
+// comment me out for 2 player game
+  // $('#player').bind("DOMSubtreeModified", function(){
+  //   if($('#player').text().indexOf("Red") > -1){
+  //     var col = play.move();
+  //     dropChecker(play, board.addChecker(play.color, col));
+  //   }
+  // });
 
 
 
