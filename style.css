@@ -1,3 +1,11 @@
+    #player{
+      color: white;
+      background-color: black;
+      text-align: center;
+      font-family: Verdana, Geneva, sans-serif;
+      height: 30px;
+    }
+
     .checker {
       position: absolute;
       width: 100px;
