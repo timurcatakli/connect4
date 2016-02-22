@@ -7,7 +7,8 @@ View.prototype.getClick = function(board, play, dropChecker){
       e.preventDefault;
       var col = $(this).attr('col');
       resetTimer(play);
-      dropChecker(play, board.addChecker(play.color, col));
+      dropChecker(play, board.addChecker(play.color, col), board);
+
     });
 
     $("#resetGame").click(function(e)
@@ -19,7 +20,7 @@ View.prototype.getClick = function(board, play, dropChecker){
 }
 // checker click function ends here
 
-var dropChecker = function (play, coordinates){
+var dropChecker = function (play, coordinates, board){
   var checkerRow = coordinates[1];
   var checkerColumn = coordinates[0];
   var checkerColumnJquery = ".checker" + checkerColumn;
@@ -30,7 +31,7 @@ var dropChecker = function (play, coordinates){
     // $(destinationCell).css('background-color', play.color);
     $(destinationCell).addClass("cell_" + play.color);
   }, 1000);
-  $(checkerColumnJquery).animate({top: "-=" + checkerRowJquery + "px"});
+  $(checkerColumnJquery).animate({top: "-=" + checkerRowJquery + "px"}, function(){board.solver()});
   play.switchPlayer();
 }
 
