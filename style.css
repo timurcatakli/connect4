@@ -3,7 +3,11 @@
       background-color: black;
       text-align: center;
       font-family: Verdana, Geneva, sans-serif;
-      height: 30px;
+      height: 80px;
+      width: 100px;
+      position: absolute;
+      left: 900px;
+      top: 0px;
     }
 
     .checker {
