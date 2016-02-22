@@ -7,7 +7,7 @@ View.prototype.getClick = function(board, play, dropChecker){
       e.preventDefault;
       console.log(this);
       var col = $(this).attr('col');
-      // stopTimer();
+      resetTimer(play);
       dropChecker(play, board.addChecker(play.color, col));
     });
     $("#resetGame").click(function(e)
@@ -54,13 +54,11 @@ var startTimer = function(duration, display,play) {
 }
 
 function resetTimer(play){
-  turnTimer = null;
+  clearTimeout(turnTimer);
    display = $('#time');
    startTimer(10, display,play);
 }
-function stopTimer(play){
-  turnTimer = null;
-}
+
 
 
 $(document).ready(function(){
