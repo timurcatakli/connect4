@@ -1,35 +1,93 @@
-function View(){
+
+function View(){};
+
+// checker click function starts here
+View.prototype.getClick = function(board, play, dropChecker){
+    $(".checker").click(function(e){
+      e.preventDefault;
+      console.log(this);
+      var col = $(this).attr('col');
+      dropChecker(play, board.addChecker(play.color, col));
+    });
 
 }
+// checker click function ends here
 
-View.prototype.getClick()=
-View.prototype.dropChecker(color, coordinates)= //passed in from Board
+var dropChecker = function (play, coordinates){
+  var checkerRow = coordinates[1];
+  var checkerColumn = coordinates[0];
+  var checkerColumnJquery = ".checker" + checkerColumn;
+  var destinationCell = '.cell' + checkerColumn + checkerRow
+  var checkerRowJquery = (6 - checkerRow) * 120;
+    // console.log(checkerRow + " " + checkerColumn);
+  // $(checkerColumnJquery).css("background-color", play.color);
+  $(checkerColumnJquery).animate({top: "+=" + checkerRowJquery + "px"}, 1000);
+  setTimeout(function(){
+    $(destinationCell).css('background-color', play.color);
+  }, 1000);
+  $(checkerColumnJquery).animate({top: "-=" + checkerRowJquery + "px"});
+  play.switchPlayer();
+}
 
+$(document).ready(function(){
 
-  $(".checker00").click(function(){
-    $(".checker00").animate({top: "+=240px"});
+  // mouseover function starts here
+  $(".checker").mouseover(function(){
   });
 
-  $(".checker01").click(function(){
-    $(".checker01").animate({top: "+=600px"});
+  $(".checker").mouseout(function(){
   });
+  // mouseover function ends here
 
-  $(".checker02").click(function(){
-    $(".checker02").animate({top: "+=120px"});
-  });
+  var board = new Board();
+  var play = new Play();
+  var view = new View();
+  var solved = false;
 
-  $(".checker03").click(function(){
-    $(".checker03").animate({top: "+=480px"});
-  });
+  view.getClick(board, play, dropChecker);
 
-  $(".checker04").click(function(){
-    $(".checker04").animate({top: "+=360px"});
-  });
 
-  $(".checker05").click(function(){
-    $(".checker05").animate({top: "+=120px"});
-  });
 
-  $(".checker06").click(function(){
-    $(".checker06").animate({top: "+=600px"});
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // var fiveSeconds = new Date().getTime() + 5000;
+
+  // $('#clock').countdown(fiveSeconds).on('update.countdown', function(event) {
+
+  //   var $this = $(this);
+  //     $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
+  // }).on('finish.countdown', function(e){
+  //   alert("Test");
+  //   this.countdown('start');
+  // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})

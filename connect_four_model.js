@@ -1,4 +1,4 @@
-function Board(){
+function Board(view){
   this.col0 = [];
   this.col1 = [];
   this.col2 = [];
@@ -6,6 +6,7 @@ function Board(){
   this.col4 = [];
   this.col5 = [];
   this.col6 = [];
+  // this.view = view;
 }
 
 Board.prototype.horizontalHelper = function(colCounter, counter, color, index){
@@ -70,7 +71,6 @@ Board.prototype.verticalSolve = function(){
 Board.prototype.backSolve = function(){}
 
 Board.prototype.forwardSolve = function(){}
-Board.prototype.addChecker = function(){}
 Board.prototype.talkToView = function(){}//sends coordinates col# and row #
 
 // function Play(){
@@ -79,3 +79,21 @@ Board.prototype.talkToView = function(){}//sends coordinates col# and row #
 
 // Play.prototype.switchPlayer =
 // // if color = red be black
+
+Board.prototype.addChecker = function(color, column){
+  var property = "col" + column;
+    if (this.columnFilled(property)){
+      this[property].push(color);
+      var coordinatesForView = [parseInt(column), (this[property].length-1)]
+      return coordinatesForView
+    }
+    else {
+      console.log("error")
+    }
+}
+
+Board.prototype.columnFilled = function (property) {
+  if (this[property].length <= 5){
+    return true
+  }
+}
