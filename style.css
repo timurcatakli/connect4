@@ -33,6 +33,15 @@
       background-image: url(img/checker_black.png);
     }
 
+    #player{
+      position: relative;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Verdana;
+      color: white;
+      background-color: black;
+      text-align: center;
+    }
 
     .checker {
       position: absolute;
