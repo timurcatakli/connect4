@@ -1,5 +1,6 @@
 function Play(){
-  this.color = "red"
+  this.color = "red";
+  this.computer = true;
 }
 
 Play.prototype.switchPlayer = function(){
@@ -19,10 +20,8 @@ Play.prototype.switchPlayer = function(){
   }
 }
 
-function Computer(){}
 
-Computer.prototype.move = function(){
-  var color = "black"
+Play.prototype.move = function(){
   var column = Math.floor(Math.random() * (6 - 0 +1) + 0)
   return column
 }
